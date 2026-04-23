@@ -1,0 +1,17 @@
+name: 🚀 Feature Request
+description: Предложить новую идею для FreshDonate
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: Описание идеи
+      description: Какую проблему решит эта фича?
+      placeholder: Я бы хотел видеть...
+    validations:
+      required: true
+  - type: textarea
+    id: solution
+    attributes:
+      label: Как это должно работать?
+      placeholder: Опишите логику работы или дизайн.

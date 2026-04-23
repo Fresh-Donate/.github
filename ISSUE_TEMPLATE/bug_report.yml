@@ -1,0 +1,38 @@
+name: 🐞 Bug
+description: Сообщить об ошибке в FreshDonate
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Спасибо за сообщение об ошибке! Пожалуйста, заполните форму ниже.
+  - type: dropdown
+    id: component
+    attributes:
+      label: Компонент
+      description: В какой части системы возникла проблема?
+      options:
+        - Shop (Frontend)
+        - Panel (Admin)
+        - Backend (API)
+        - Plugin (Minecraft)
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Шаги для воспроизведения
+      placeholder: 1. Зайти на страницу... 2. Нажать кнопку...
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Версия (или ветка)
+      placeholder: например, v1.0.2 или main
+  - type: textarea
+    id: logs
+    attributes:
+      label: Логи или Скриншоты
+      description: Вставьте логи из консоли или прикрепите скриншот.
+      render: shell
